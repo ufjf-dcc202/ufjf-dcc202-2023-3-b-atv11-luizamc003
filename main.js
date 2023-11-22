@@ -1,11 +1,19 @@
+import { getLista } from "./lista.js";
+
 const pEntrada = document.querySelector("#entrada");
 const btnAdicionar = document.querySelector("#adicionar");
 const btnLimpar = document.querySelector("#limpar");
 const olItens = document.querySelector("#itens");
 
-adicionaElementoNaLista("Primeiro");
-adicionaElementoNaLista("Segundo");
-adicionaElementoNaLista("Terceiro");
+atualizarListaOrdenada();
+
+function atualizarListaOrdenada() {
+  const lista = getLista();
+
+  for (let i = 0; i < lista.length; i++) {
+    adicionaElementoNaLista(lista[i]);
+  }
+}
 
 function adicionaElementoNaLista(texto) {
   const li = document.createElement("li");
