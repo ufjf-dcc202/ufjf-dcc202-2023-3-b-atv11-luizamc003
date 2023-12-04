@@ -1,14 +1,15 @@
 //estado inicial da lista
 const lista = ["Um", "Dois", "Três"];
 
-function getLista() {
+function getLista(item) {
   return lista;
 }
-function adicionaNaLista() {
+
+function adicionaNaLista(item) {
   lista.push(item);
 }
 
-function removeDaLista() {
+function removeDaLista(posicao) {
   lista.splice(posicao, 1);
 }
 
